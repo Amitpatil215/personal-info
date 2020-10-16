@@ -19,7 +19,11 @@ class _MyAppState extends State<MyApp> {
   var _index = 0;
   void _answer() {
     setState(() {
-      _index = _index + 1;
+      if (_index < 1) {
+        _index = _index + 1;
+      } else {
+        _index = 0;
+      }
     });
     print('abd');
   }
